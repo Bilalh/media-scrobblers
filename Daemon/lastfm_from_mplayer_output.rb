@@ -6,8 +6,8 @@ require "yaml"
 require "pp"
 require 'escape'
 
-METADATA_FILE  = "/Users/bilalh/Movies/.Movie/OpeningP/_metadata.yaml"
-LASTFM_KEY     = "/Users/bilalh/Projects/rb-scrobble/lastfm.yml"
+METADATA_FILE  = File.expand_path("~/Movies/.Movie/OpeningP/_metadata.yaml")
+LASTFM_KEY     = File.expand_path("~/.config/lastfm.yml")
 PLAYCOUNT_FILE = ENV['PLAYCOUNT_FILE']  || File.expand_path("~/Music/playcount.yaml")
 
 output         = if ENV['OUT_STD_ERR'] then $stderr else $stdout end

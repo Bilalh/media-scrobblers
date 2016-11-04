@@ -10,7 +10,7 @@ METADATA_EXTRA = "/Users/bilalh/Movies/.Movie/OpeningP/_metadata_extra.yaml"
 MISSING_FILE   = "/Users/bilalh/Movies/.Movie/OpeningP/_missing.yaml"
 HISTORY_FILE   = "/Users/bilalh/Movies/.Movie/OpeningP/_mhistory_c.yaml"
 DATA_FILE      = "/Users/bilalh/Movies/.Movie/OpeningP/_mdata.yaml"
-yml=File.join(File.dirname(__FILE__), 'lastfm.yml')
+yml=File.expand_path("~/.config/lastfm.yml")
 Rockstar.lastfm = YAML.load_file(yml)
 session_key=get_session_key(yml)
 

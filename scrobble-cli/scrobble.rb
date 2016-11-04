@@ -87,7 +87,7 @@ if __FILE__ == $0
 	print "Args: #{opts}"
 
 
-	fp=File.join(File.dirname(__FILE__), 'lastfm.yml')
+	fp=File.expand_path("~/.config/lastfm.yml")
 
 	Rockstar.lastfm = YAML.load_file(fp)
 	session_key=get_session_key(fp)
